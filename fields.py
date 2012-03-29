@@ -3,8 +3,6 @@ from django import forms
 class LocationWidget(forms.widgets.Widget):
     """Forms widget to represent a location.
     
-    I think this is probably broken.
-    
     Uses Google Maps API to represent a location on a map with a marker.
     """
     def __init__(self, *args, **kwargs):
@@ -61,8 +59,8 @@ class LocationWidget(forms.widgets.Widget):
         return ''.join(html)
 
 class LocationField(forms.Field):
-    """This form field is used to obtain a microlatitude and microlongitude
-    coordinate from a Google Map.
+    """This form field is used to obtain a latitude and longitude coordinate
+    from a Google Map.
     """
     widget = LocationWidget
     
