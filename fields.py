@@ -16,7 +16,7 @@ class LocationWidget(forms.widgets.Widget):
 
         html = []
         if attrs.get('help_text') != None:
-            html.append('<p>' + attrs['instructions'] + '</p>')
+            html.append('<p>' + attrs['help_text'] + '</p>')
         html.append("""<div id="map" style="height:%(height)s;width:%(width)s;">
             <noscript>This page requires JavaScript.</noscript>
         </div>
