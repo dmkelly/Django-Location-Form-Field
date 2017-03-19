@@ -72,7 +72,7 @@ class LocationField(forms.Field):
             return None
         else:
             return {'latitude': self.__parse_latitude(value),
-                        'longitude': self.__parse_latitude(value)}
+                        'longitude': self.__parse_longitude(value)}
     
     def __to_micro_coordinate(self, coord):
         """Only works on cleaned data."""
