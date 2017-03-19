@@ -15,7 +15,7 @@ class LocationWidget(forms.widgets.Widget):
             lat, lon = value.split(',')
 
         html = []
-        if attrs.get('help_text') != None:
+        if attrs.get('help_text') is not None:
             html.append('<p>' + attrs['help_text'] + '</p>')
         html.append("""<div id="map" style="height:%(height)s;width:%(width)s;">
             <noscript>This page requires JavaScript.</noscript>
